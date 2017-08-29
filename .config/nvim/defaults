@@ -1,0 +1,16 @@
+" vim: filetype=vim
+
+syntax on
+let g:airline_powerline_fonts = 1
+let g:rainbow_active = 1
+filetype plugin indent on
+
+" Map ack.vim to use ag
+let g:ackprg = 'ag --vimgrep --smart-case'
+cnoreabbrev ag Ack
+
+" Color scheme
+" g:gruvbox_hls_cursor
+colorscheme gruvbox
+set background=dark    " Setting dark mode
+" set background=light   " Setting light mode
