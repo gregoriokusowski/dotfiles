@@ -15,6 +15,16 @@ colorscheme gruvbox
 set background=dark    " Setting dark mode
 " set background=light   " Setting light mode
 
+" Faster ctrlP search
+let g:ctrlp_lazy_update = 100 "Only refreshes the results every 100ms so if you type fast searches don't pile up
+let g:ctrlp_user_command = 'find %s -type f | egrep -iv "(\.(eot|gif|gz|ico|jpg|jpeg|otf|png|psd|pyc|svg|ttf|woff|zip)$)|(/\.)|((^|\/)tmp\/)"' "Quicker indexing
+
+" NERDTree
+map <C-k><C-b> :NERDTreeToggle<CR>
+let NERDTreeRespectWildIgnore=1
+let NERDTreeShowHidden = 1
+let NERDTreeCascadeSingleChildDir=0
+
 set number            " Show line numbers
 set ruler             " Show line and column number
 syntax enable         " Turn on syntax highlighting allowing local overrides
@@ -71,5 +81,5 @@ set wildignore+=*/tmp/librarian/*,*/.vagrant/*,*/.kitchen/*,*/vendor/cookbooks/*
 set wildignore+=*/tmp/cache/assets/*/sprockets/*,*/tmp/cache/assets/*/sass/*
 
 " Disable temp and backup files
-" set wildignore+=*.swp,*~,._*
-set wildignore+=*.swp,*~
+set wildignore+=*.swp,*~,._*
+" set wildignore+=*.swp,*~
