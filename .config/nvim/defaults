@@ -2,8 +2,11 @@
 
 syntax on
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 let g:rainbow_active = 1
 filetype plugin indent on
+
+set hidden
 
 " Map ack.vim to use ag
 let g:ackprg = 'ag --vimgrep --smart-case'
