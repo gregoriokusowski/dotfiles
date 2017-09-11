@@ -1,2 +1,4 @@
 " vim: filetype=vim
 
+map <C-k><C-b> :NERDTreeToggle<CR>
+

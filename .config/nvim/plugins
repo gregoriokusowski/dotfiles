@@ -9,6 +9,7 @@ Plug 'bling/vim-airline'
 Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdtree'
 Plug 'jeetsukumaran/vim-buffergator'
+Plug 'easymotion/vim-easymotion'
 
 " Search
 Plug 'ctrlpvim/ctrlp.vim'
