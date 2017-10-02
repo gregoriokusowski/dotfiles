@@ -18,16 +18,13 @@ Plug 'mileszs/ack.vim'
 " Theme
 Plug 'morhetz/gruvbox'
 
-" Tags
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-easytags'
-
 " Clojure / Lisp
 Plug 'guns/vim-clojure-static'
 Plug 'guns/vim-clojure-highlight'
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-classpath'
 Plug 'luochen1990/rainbow'
 
 call plug#end()
