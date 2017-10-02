@@ -27,4 +27,10 @@ Plug 'tpope/vim-fireplace'
 Plug 'tpope/vim-classpath'
 Plug 'luochen1990/rainbow'
 
+" Go
+Plug 'fatih/vim-go'
+
+" Ruby/Rails
+Plug 'tpope/vim-rails'
+
 call plug#end()
