@@ -21,12 +21,13 @@ set background=dark    " Setting dark mode
 
 " Faster ctrlP search
 let g:ctrlp_lazy_update = 100 "Only refreshes the results every 100ms so if you type fast searches don't pile up
-let g:ctrlp_user_command = 'find %s -type f | egrep -iv "(\.(eot|gif|gz|ico|jpg|jpeg|otf|png|psd|pyc|svg|ttf|woff|zip)$)|(/\.)|((^|\/)tmp\/)"' "Quicker indexing
+let g:ctrlp_user_command = 'find %s -type f | egrep -iv "(\.(eot|gif|gz|ico|jpg|jpeg|otf|png|psd|pyc|svg|ttf|woff|zip)$)|(/\.)|((^|\/)node_modules\/)|((^|\/)tmp\/)"' "Quicker indexing
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " NERDTree
-let NERDTreeRespectWildIgnore=1
+let NERDTreeRespectWildIgnore = 1
 let NERDTreeShowHidden = 1
-let NERDTreeCascadeSingleChildDir=0
+let NERDTreeCascadeSingleChildDir = 0
 
 " Airline
 let g:airline_powerline_fonts = 1
@@ -63,4 +64,4 @@ set ignorecase  " searches are case insensitive...
 set smartcase   " ... unless they contain at least one capital letter
 
 " TODO: Investigate the precise meaning of these settings
-set wildmode=list:full
+" set wildmode=list:full
