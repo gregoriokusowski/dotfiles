@@ -2,3 +2,5 @@
 
 map <C-k><C-b> :NERDTreeToggle<CR>
 
+" golang
+au FileType go nmap <leader>r <Plug>(go-rename)
