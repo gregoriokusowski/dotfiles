@@ -21,7 +21,7 @@ set background=dark    " Setting dark mode
 
 " Faster ctrlP search
 let g:ctrlp_lazy_update = 100 "Only refreshes the results every 100ms so if you type fast searches don't pile up
-let g:ctrlp_user_command = 'find %s -type f | egrep -iv "(\.(eot|gif|gz|ico|jpg|jpeg|otf|png|psd|pyc|svg|ttf|woff|zip)$)|(/\.)|((^|\/)node_modules\/)|((^|\/)tmp\/)"' "Quicker indexing
+let g:ctrlp_user_command = 'find %s -type f | egrep -iv "(\.(eot|gif|gz|ico|jpg|jpeg|otf|png|psd|pyc|svg|ttf|woff|zip)$)|((^|\/)node_modules\/)|((^|\/)tmp\/)"' "Quicker indexing
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " NERDTree
