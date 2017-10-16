@@ -1,0 +1,3 @@
+source ~/.dotfiles/aliases
+source ~/.dotfiles/z/z.sh
+source ~/.dotfiles/liquidprompt/liquidprompt
