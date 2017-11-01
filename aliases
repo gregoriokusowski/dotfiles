@@ -1,6 +1,11 @@
 # General
 alias la="ls -lash"
+alias k="kubectl"
+alias dc="docker-compose"
 
-# Docker
-alias ctop="docker run --rm -ti --name=ctop -v /var/run/docker.sock:/var/run/docker.sock quay.io/vektorlab/ctop:latest"
+# docker
 
+# dot -Tpng -o output.png input.dot
+alias dot='docker run --rm -v `pwd`:/graphviz markfletcher/graphviz dot'
+
+alias ctop='docker run --rm -ti --name=ctop -v /var/run/docker.sock:/var/run/docker.sock quay.io/vektorlab/ctop:latest'
