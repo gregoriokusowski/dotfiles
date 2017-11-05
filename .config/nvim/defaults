@@ -15,6 +15,7 @@ cnoreabbrev ag Ack
 
 " Color scheme
 " g:gruvbox_hls_cursor
+let g:gruvbox_termcolors=16
 colorscheme gruvbox
 set background=dark    " Setting dark mode
 " set background=light   " Setting light mode

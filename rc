@@ -2,4 +2,9 @@ source ~/.dotfiles/aliases
 source ~/.dotfiles/z/z.sh
 source ~/.dotfiles/liquidprompt/liquidprompt
 
-export TERM="xterm-256color"
+export TERM=xterm-256color
+
+# https://www.iterm2.com/documentation-escape-codes.html
+# echo -e "\033]6;1;bg;red;brightness;40\a"
+# echo -e "\033]6;1;bg;green;brightness;40\a"
+# echo -e "\033]6;1;bg;blue;brightness;40\a"
