@@ -12,6 +12,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdtree'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'easymotion/vim-easymotion'
+Plug 'scrooloose/nerdcommenter'
 
 " Search
 Plug 'ctrlpvim/ctrlp.vim'
