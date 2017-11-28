@@ -1,6 +1,7 @@
 " vim: filetype=vim
 
 map <C-k><C-b> :NERDTreeToggle<CR>
+map <C-k><C-k> :NERDTreeFind<CR>
 
 " golang
 au FileType go nmap <leader>r <Plug>(go-rename)
