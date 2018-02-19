@@ -3,7 +3,11 @@ alias la="ls -lash"
 alias k="kubectl"
 alias dc="docker-compose"
 alias ee="emacs --daemon"
+
 alias e="emacsclient -t"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+   alias e="emacsclient -c"
+fi
 
 # docker
 
