@@ -15,10 +15,10 @@ cnoreabbrev ag Ack
 
 " Color scheme
 " g:gruvbox_hls_cursor
-let g:gruvbox_termcolors=16
+"let g:gruvbox_termcolors=16
 colorscheme gruvbox
-set background=dark    " Setting dark mode
-" set background=light   " Setting light mode
+" set background=dark    " Setting dark mode
+set background=light   " Setting light mode
 
 " Faster ctrlP search
 let g:ctrlp_lazy_update = 100 "Only refreshes the results every 100ms so if you type fast searches don't pile up
