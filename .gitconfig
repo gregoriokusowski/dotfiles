@@ -43,3 +43,5 @@
 	required = true
 [lfs]
 	fetchexclude = images/
+[url "git@github.com:"]
+	insteadOf = https://github.com/
