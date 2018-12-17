@@ -39,6 +39,8 @@
     :config
     (evil-collection-init))
   (use-package evil-nerd-commenter
+    :ensure t)
+  (use-package evil-easymotion
     :ensure t))
 
 (use-package helm
@@ -78,28 +80,27 @@
   (setq which-key-separator " ")
   (setq which-key-prefix-prefix "+")
   :config
-  (which-key-mode 1))
+  (which-key-mode 1)
+  (which-key-setup-side-window-right-bottom))
 
 (use-package general
   :ensure t
   :config (general-define-key
-  :states '(normal visual insert emacs)
-  :prefix "SPC"
-  :non-normal-prefix "M-SPC"
-  ;; "/"   '(counsel-rg :which-key "ripgrep") ; You'll need counsel package for this
-  "SPC" '(helm-M-x :which-key "M-x")
-  ;; "pf"  '(helm-find-files :which-key "find files")
-  ;; Buffers
-  "bb"  '(helm-buffers-list :which-key "buffers list")
-  "bn"  '(evil-buffer-new :which-key "new buffer")
-  "bd"  '(evil-delete-buffer :which-key "delete buffer")
-  "cl"  '(evilnc-comment-or-uncomment-lines :which-key "comment/uncomment lines")
-  ;; "TAB" '(switch-to-prev-buffer :which-key "previous buffer")
-  ;; Window
-  "w"   '(evil-window-map :which-key "evil window")
-  ;; Others
-  "p"   '(projectile-command-map :which-key "projectile")
-))
+    :states '(normal visual insert emacs)
+    :prefix "SPC"
+    :non-normal-prefix "M-SPC"
+    "SPC" '(helm-M-x :which-key "M-x")
+    ;; Buffers
+    "bb"  '(helm-buffers-list :which-key "buffers list")
+    "bn"  '(evil-buffer-new :which-key "new buffer")
+    "bd"  '(evil-delete-buffer :which-key "delete buffer")
+    "cl"  '(evilnc-comment-or-uncomment-lines :which-key "comment/uncomment lines")
+    ;; Window
+    "w"   '(evil-window-map :which-key "evil window")
+    ;; Others
+    "j"   '(evilem-map :which-key "evil motion")
+    "p"   '(projectile-command-map :which-key "projectile")
+    ))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -108,7 +109,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (helm-ag evil-nerd-commenter general which-key helm-projectile projectile helm evil-commentary evil-collection evil-surround evil use-package))))
+    (evil-easymotion evil-nerd-commenter general which-key helm-projectile projectile helm evil-commentary evil-collection evil-surround evil use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
