@@ -16,3 +16,6 @@ export TERM=xterm-256color
 # append history
 shopt -s histappend
 #export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+
+# enable vi mode
+set -o vi
