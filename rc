@@ -19,3 +19,5 @@ shopt -s histappend
 
 # enable vi mode
 set -o vi
+
+eval "$(rbenv init -)"

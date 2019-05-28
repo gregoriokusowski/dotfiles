@@ -1,6 +1,8 @@
 # General
 alias la="ls -lash"
 alias k="kubectl"
+alias g="git"
+alias d="docker"
 alias dc="docker-compose"
 alias ee="emacs --daemon"
 

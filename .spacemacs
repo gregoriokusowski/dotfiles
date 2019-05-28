@@ -26,7 +26,9 @@
      restclient
      (go :variables
          gofmt-command "goimports"
-         go-tab-width 4))))
+         go-tab-width 4)
+     (ruby :variables
+         ruby-version-manager 'rbenv))))
 
 (defun dotspacemacs/init ()
   (setq-default
