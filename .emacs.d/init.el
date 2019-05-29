@@ -47,24 +47,25 @@
   :ensure t
   :init
   (setq helm-M-x-fuzzy-match t
-  helm-mode-fuzzy-match t
-  helm-buffers-fuzzy-matching t
-  helm-recentf-fuzzy-match t
-  helm-locate-fuzzy-match t
-  helm-semantic-fuzzy-match t
-  helm-imenu-fuzzy-match t
-  helm-completion-in-region-fuzzy-match t
-  helm-candidate-number-list 150
-  helm-split-window-in-side-p t
-  helm-move-to-line-cycle-in-source t
-  helm-echo-input-in-header-line t
-  helm-autoresize-max-height 0
-  helm-autoresize-min-height 20)
-  :config
-  (helm-mode 1)
-  (use-package helm-ag
-    :ensure t))
+	helm-mode-fuzzy-match t
+	helm-buffers-fuzzy-matching t
+	helm-recentf-fuzzy-match t
+	helm-locate-fuzzy-match t
+	helm-semantic-fuzzy-match t
+	helm-imenu-fuzzy-match t
+	helm-completion-in-region-fuzzy-match t
+	helm-candidate-number-list 150
+	helm-split-window-in-side-p t
+	helm-move-to-line-cycle-in-source t
+	helm-echo-input-in-header-line t
+	helm-autoresize-max-height 0
+	helm-autoresize-min-height 20)
+	:config
+	(helm-mode 1)
+	(use-package helm-ag
+	    :ensure t))
 
+;; Offers project support/switch/etc
 (use-package projectile
   :ensure t
   :init
@@ -72,8 +73,23 @@
   (setq projectile-completion-system 'helm)
   :config
   (projectile-mode 1)
-  (use-package helm-projectile :ensure t))
+  (use-package helm-projectile :ensure t)
+  (use-package neotree
+    :ensure t
+    :init
+    (setq projectile-switch-project-action 'neotree-projectile-action)
+    :config
+    (evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
+    (evil-define-key 'normal neotree-mode-map (kbd "SPC") 'neotree-quick-look)
+    (evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
+    (evil-define-key 'normal neotree-mode-map (kbd "RET") 'neotree-enter)
+    (evil-define-key 'normal neotree-mode-map (kbd "g") 'neotree-refresh)
+    (evil-define-key 'normal neotree-mode-map (kbd "n") 'neotree-next-line)
+    (evil-define-key 'normal neotree-mode-map (kbd "p") 'neotree-previous-line)
+    (evil-define-key 'normal neotree-mode-map (kbd "A") 'neotree-stretch-toggle)
+    (evil-define-key 'normal neotree-mode-map (kbd "H") 'neotree-hidden-file-toggle)))
 
+;; Shows the available shortcuts in a side window
 (use-package which-key
   :ensure t
   :init
@@ -83,6 +99,7 @@
   (which-key-mode 1)
   (which-key-setup-side-window-right-bottom))
 
+;; Based on the specified prefix, is shows/enable the defined options
 (use-package general
   :ensure t
   :config (general-define-key
@@ -100,6 +117,7 @@
     ;; Others
     "j"   '(evilem-map :which-key "evil motion")
     "p"   '(projectile-command-map :which-key "projectile")
+    "t"   '(neotree-toggle :which-key "neotree")
     ))
 
 (custom-set-variables
@@ -109,7 +127,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (evil-easymotion evil-nerd-commenter general which-key helm-projectile projectile helm evil-commentary evil-collection evil-surround evil use-package))))
+    (neotree evil-easymotion evil-nerd-commenter general which-key helm-projectile projectile helm evil-commentary evil-collection evil-surround evil use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
