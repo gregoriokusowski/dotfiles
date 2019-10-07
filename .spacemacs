@@ -24,7 +24,8 @@
      docker
      restclient
      (clojure :variables
-              clojure-enable-clj-refactor t)
+              clojure-enable-clj-refactor t
+              cljr-inject-dependencies-at-jack-in nil)
      (go :variables
          gofmt-command "goimports"
          go-tab-width 4)
