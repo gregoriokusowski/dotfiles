@@ -2,7 +2,7 @@ source "%val{config}/plugins/plug.kak/rc/plug.kak"
 
 colorscheme solarized-light
 
-hook global WinCreate ^[^*]+$ %{editorconfig-load}
+hook global WinCreate ^[^*]+$ %{ editorconfig-load } # no *buffers*
 
 add-highlighter global/ show-whitespaces
 add-highlighter global/ number-lines -relative -hlcursor
@@ -14,3 +14,4 @@ plug "andreyorst/powerline.kak" defer "powerline" %{
 plug "andreyorst/fzf.kak" defer "powerline" %{
     map global normal <c-p> ': fzf-mode<ret>'
 }
+
