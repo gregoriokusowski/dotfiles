@@ -34,7 +34,7 @@ Plug 'venantius/vim-cljfmt'
 Plug 'venantius/vim-eastwood'
 
 " Go
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Ruby/Rails
 Plug 'tpope/vim-rails'

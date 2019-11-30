@@ -1,7 +1,44 @@
 " vim: filetype=vim
+let g:mapleader      = "\<Space>"
+let g:maplocalleader = ','
 
-map <C-k><C-b> :NERDTreeToggle<CR>
-map <C-k><C-k> :NERDTreeFind<CR>
+nnoremap <Leader>pt :NERDTreeToggle<CR>
+nnoremap <Leader>pf :NERDTreeFind<CR>
 
 " golang
 au FileType go nmap <leader>r <Plug>(go-rename)
+
+" Copy from https://github.com/liuchengxu/vim-better-default/blob/master/plugin/default.vim
+" Buffers
+nnoremap <Leader>bp :bprevious<CR>
+nnoremap <Leader>bn :bnext<CR>
+nnoremap <Leader>bf :bfirst<CR>
+nnoremap <Leader>bl :blast<CR>
+nnoremap <Leader>bd :bd<CR>
+nnoremap <Leader>bk :bw<CR>
+
+" Window
+nnoremap <Leader>ww <C-W>w
+nnoremap <Leader>wr <C-W>r
+nnoremap <Leader>wd <C-W>c
+nnoremap <Leader>wq <C-W>q
+nnoremap <Leader>wj <C-W>j
+nnoremap <Leader>wk <C-W>k
+nnoremap <Leader>wh <C-W>h
+nnoremap <Leader>wl <C-W>l
+if has('nvim') || has('terminal')
+  tnoremap <Leader>wj <C-W>j
+  tnoremap <Leader>wk <C-W>k
+  tnoremap <Leader>wh <C-W>h
+  tnoremap <Leader>wl <C-W>l
+endif
+nnoremap <Leader>wH <C-W>5<
+nnoremap <Leader>wL <C-W>5>
+nnoremap <Leader>wJ :resize +5<CR>
+nnoremap <Leader>wK :resize -5<CR>
+nnoremap <Leader>w= <C-W>=
+nnoremap <Leader>ws <C-W>s
+nnoremap <Leader>w- <C-W>s
+nnoremap <Leader>wv <C-W>v
+nnoremap <Leader>w\| <C-W>v
+nnoremap <Leader>w2 <C-W>v
