@@ -4,3 +4,8 @@ karabiner/automatic_backups/
 .emacs.d/.cache
 .emacs.d/elpa
 .config/kak/plugins/
+.tmux/plugins/tmux-fingers/
+.tmux/plugins/tmux-pain-control/
+.tmux/plugins/tmux-sensible/
+.tmux/plugins/tmux-yank/
+
