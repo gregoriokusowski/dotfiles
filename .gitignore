@@ -3,3 +3,4 @@ karabiner/automatic_backups/
 *.log
 .emacs.d/.cache
 .emacs.d/elpa
+.config/kak/plugins/
