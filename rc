@@ -7,7 +7,7 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 export TERM=xterm-256color
-export EDITOR="kak"
+export EDITOR="vi"
 export OPENER=$EDITOR
 
 # https://www.iterm2.com/documentation-escape-codes.html
