@@ -6,13 +6,17 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-eunuch'
 Plug 'bling/vim-airline'
 Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdtree'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdcommenter'
+Plug 'editorconfig/editorconfig-vim'
+
+" Autocomplete
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+let g:deoplete#enable_at_startup = 1
 
 " Search
 Plug 'ctrlpvim/ctrlp.vim'
@@ -20,18 +24,6 @@ Plug 'mileszs/ack.vim'
 
 " Theme
 Plug 'morhetz/gruvbox'
-
-" Clojure / Lisp
-Plug 'guns/vim-clojure-static'
-Plug 'guns/vim-clojure-highlight'
-Plug 'guns/vim-sexp'
-Plug 'tpope/vim-sexp-mappings-for-regular-people'
-Plug 'tpope/vim-fireplace'
-Plug 'tpope/vim-classpath'
-Plug 'luochen1990/rainbow'
-Plug 'clojure-vim/vim-cider'
-Plug 'venantius/vim-cljfmt'
-Plug 'venantius/vim-eastwood'
 
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
