@@ -6,7 +6,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdtree'
 Plug 'jeetsukumaran/vim-buffergator'
@@ -24,6 +24,7 @@ Plug 'mileszs/ack.vim'
 
 " Theme
 Plug 'morhetz/gruvbox'
+let g:gruvbox_contrast_light = 'hard'
 
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
