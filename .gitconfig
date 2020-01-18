@@ -1,5 +1,5 @@
 [user]
-	name = Gregório Kusowski
+	name = Gregorio Kusowski
 	email = gregorio.kusowski@gmail.com
 [color]
 	branch = auto
@@ -21,14 +21,9 @@
 [branch]
 	autosetupmerge = true
 [alias]
-	ci = commit
 	st = status
-	br = branch
 	co = checkout
-	df = diff
-  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'  --decorate --stat --abbrev-commit --
-	lg2 = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --
-  lg3 = log --oneline --decorate --stat
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --
 	who = shortlog -s --
 [apply]
 	whitespace = nowarn
