@@ -2,12 +2,8 @@ source ~/.dotfiles/aliases
 source ~/.dotfiles/z/z.sh
 source ~/.dotfiles/liquidprompt/liquidprompt
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
-
 export TERM=xterm-256color
-export EDITOR="vi"
+export EDITOR="nvim"
 export OPENER=$EDITOR
 
 # https://www.iterm2.com/documentation-escape-codes.html
@@ -16,10 +12,9 @@ export OPENER=$EDITOR
 # echo -e "\033]6;1;bg;blue;brightness;40\a"
 
 # append history
-shopt -s histappend
+# shopt -s histappend
 #export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 
 # enable vi mode
 set -o vi
 
-eval "$(rbenv init -)"
