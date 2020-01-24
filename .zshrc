@@ -20,11 +20,16 @@ export EDITOR="nvim"
 export OPENER=$EDITOR
 
 # VI
-# Enable vi keybindings
+## Enable vi keybindings
 bindkey -v # previously set -o vi
 
-# Enable editing line in vi by pressing "v" in normal mode
+## Enable editing line in vi by pressing "v" in normal mode
 autoload edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
 
+## Enable Ctrl+R to search history like old bash
+bindkey '^R' history-incremental-search-backward
+
+# Enable incremental history
+setopt inc_append_history
