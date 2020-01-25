@@ -2,8 +2,12 @@
 let g:mapleader      = "\<Space>"
 let g:maplocalleader = ','
 
+" Project tree
 nnoremap <Leader>pt :NERDTreeToggle<CR>
 nnoremap <Leader>pf :NERDTreeFind<CR>
+
+" Search
+nnoremap <C-p> :Files<Cr>
 
 " golang
 au FileType go nmap <leader>r <Plug>(go-rename)

@@ -9,21 +9,11 @@ set number            " Show line numbers
 set ruler             " Show line and column number
 syntax enable         " Turn on syntax highlighting allowing local overrides
 
-" Map ack.vim to use ag
-let g:ackprg = 'ag --vimgrep --smart-case'
-cnoreabbrev ag Ack
-
 " Color scheme
-" g:gruvbox_hls_cursor
-"let g:gruvbox_termcolors=16
-colorscheme gruvbox
-" set background=dark    " Setting dark mode
 set background=light   " Setting light mode
-
-" Faster ctrlP search
-let g:ctrlp_lazy_update = 100 "Only refreshes the results every 100ms so if you type fast searches don't pile up
-let g:ctrlp_user_command = 'find %s -type f | egrep -iv "(\.(eot|gif|gz|ico|jpg|jpeg|otf|png|psd|pyc|svg|ttf|woff|zip)$)|((^|\/)node_modules\/)|((^|\/)tmp\/)"' "Quicker indexing
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:gruvbox_colors={'light0_hard':['#FFFFFF',255],'light0':['#FFFFFF',255],'light0_soft':['#FFFFFF',255],'orange':['#5dcca7',79],'light1':['#d7ffd7',194]}
+"let g:gruvbox_improved_strings=1
+colorscheme gruvbox
 
 " NERDTree
 let NERDTreeRespectWildIgnore = 1
