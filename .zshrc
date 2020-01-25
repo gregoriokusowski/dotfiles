@@ -22,14 +22,20 @@ export OPENER=$EDITOR
 # VI
 ## Enable vi keybindings
 bindkey -v # previously set -o vi
-
 ## Enable editing line in vi by pressing "v" in normal mode
 autoload edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
 
-## Enable Ctrl+R to search history like old bash
+# History
+# Enable Ctrl+R to search history like old bash
 bindkey '^R' history-incremental-search-backward
-
 # Enable incremental history
 setopt inc_append_history
+
+# Declare the variable
+typeset -A ZSH_HIGHLIGHT_STYLES
+# To differentiate aliases from other command types
+ZSH_HIGHLIGHT_STYLES[back-quoted-argument]='fg=magenta,bold'
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=magenta,italic'
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=magenta'
