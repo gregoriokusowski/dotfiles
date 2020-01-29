@@ -8,6 +8,12 @@ PROMPT=" $PROMPT"
 
 source ~/.zsh/aliases.zsh
 
+# Useful for piping.
+## Example: ls | x .upcase
+## Examples: docker images | xs .last
+x() { ruby -ne "puts \$_$1" }
+xs() { ruby -ane "puts \$F$1" }
+
 # Git proper auto-complete
 # https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 # Dropping the warning message manually since the zsh autocomplete doesn't consider aliases defined via git
@@ -39,3 +45,9 @@ typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[back-quoted-argument]='fg=magenta,bold'
 ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=magenta,italic'
 ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=magenta'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/kusowski/.sdkman"
+[[ -s "/Users/kusowski/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/kusowski/.sdkman/bin/sdkman-init.sh"
