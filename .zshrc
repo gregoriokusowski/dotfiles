@@ -47,6 +47,7 @@ ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=magenta,italic'
 ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=magenta'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(rbenv init -)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/kusowski/.sdkman"
