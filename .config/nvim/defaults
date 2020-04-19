@@ -10,10 +10,15 @@ set ruler             " Show line and column number
 syntax enable         " Turn on syntax highlighting allowing local overrides
 
 " Color scheme
-set background=light   " Setting light mode
-let g:gruvbox_colors={'light0_hard':['#FFFFFF',255],'light0':['#FFFFFF',255],'light0_soft':['#FFFFFF',255],'orange':['#5dcca7',79],'light1':['#d7ffd7',194]}
+"" gruvbox config
+"set background=light   " Setting light mode
+"let g:gruvbox_colors={'light0_hard':['#FFFFFF',255],'light0':['#FFFFFF',255],'light0_soft':['#FFFFFF',255],'orange':['#5dcca7',79],'light1':['#d7ffd7',194]}
 "let g:gruvbox_improved_strings=1
-colorscheme gruvbox
+"colorscheme gruvbox
+"" ayu config
+set termguicolors     " enable true colors support
+let ayucolor="light"  " for light version of theme
+colorscheme ayu
 
 " NERDTree
 let NERDTreeRespectWildIgnore = 1

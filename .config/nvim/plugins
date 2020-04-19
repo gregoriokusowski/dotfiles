@@ -6,6 +6,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-endwise'
 Plug 'vim-airline/vim-airline' " let g:airline_extensions = [] to improve startup time
 Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
@@ -13,6 +14,7 @@ Plug 'jeetsukumaran/vim-buffergator'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdcommenter'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'ntpeters/vim-better-whitespace'
 
 " Autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -23,7 +25,8 @@ Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
 " Visual
-Plug 'gruvbox-community/gruvbox'
+" Plug 'gruvbox-community/gruvbox'
+Plug 'ayu-theme/ayu-vim'
 
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'

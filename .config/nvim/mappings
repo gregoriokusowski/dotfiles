@@ -12,6 +12,12 @@ nnoremap <C-p> :Files<Cr>
 " golang
 au FileType go nmap <leader>r <Plug>(go-rename)
 
+" text utils
+" Leader+Y copies into clipboard - from https://vim.fandom.com/wiki/Mac_OS_X_clipboard_sharing
+vnoremap <silent> <Leader>y :<CR>:let @a=@" \| execute "normal! vgvy" \| let res=system("pbcopy", @") \| let @"=@a<CR>
+" shuffle
+vnoremap <Leader>s :'<,'>!sort -R<CR><CR>
+
 " Copy from https://github.com/liuchengxu/vim-better-default/blob/master/plugin/default.vim
 " Buffers
 nnoremap <Leader>bp :bprevious<CR>
