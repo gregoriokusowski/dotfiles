@@ -1,6 +1,7 @@
 source <(antibody init)
-antibody bundle < ~/.zsh/.zsh_plugins.txt > ~/.zsh/.zsh_plugins.sh
-source ~/.zsh/.zsh_plugins.sh
+antibody bundle < ~/.zsh/.zsh_plugins.txt
+#antibody bundle < ~/.zsh/.zsh_plugins.txt > ~/.zsh/.zsh_plugins.sh
+#source ~/.zsh/.zsh_plugins.sh
 
 # Oneliner prompt
 prompt_newline='%666v'
