@@ -25,6 +25,7 @@ source ~/.zsh/git-completion.bash
 export TERM=xterm-256color
 export EDITOR="nvim"
 export OPENER=$EDITOR
+export HIGHLIGHT_STYLE=base16/classic-light
 
 # VI
 ## Enable vi keybindings
