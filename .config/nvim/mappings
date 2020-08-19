@@ -8,6 +8,8 @@ nnoremap <Leader>pf :NERDTreeFind<CR>
 
 " Search
 nnoremap <C-p> :Files<Cr>
+nnoremap <C-c> :Commands<Cr>
+nnoremap <Leader>b :Buffers<Cr>
 
 " golang
 au FileType go nmap <leader>r <Plug>(go-rename)

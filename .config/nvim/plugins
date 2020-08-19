@@ -7,18 +7,17 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
+Plug 'AndrewRadev/splitjoin.vim'
 Plug 'vim-airline/vim-airline' " let g:airline_extensions = [] to improve startup time
 Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
-Plug 'jeetsukumaran/vim-buffergator'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdcommenter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ntpeters/vim-better-whitespace'
 
-" Autocomplete
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-let g:deoplete#enable_at_startup = 1
+" LSP
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Search
 Plug '/usr/local/opt/fzf'
@@ -35,9 +34,6 @@ autocmd! User GoyoLeave Limelight!
 
 " Go
 Plug 'fatih/vim-go', { 'for':'go', 'do': ':GoUpdateBinaries' }
-
-" Ruby/Rails
-Plug 'tpope/vim-rails', { 'for': ['rails', 'ruby'] }
 
 " Clojure
 Plug 'tpope/vim-fireplace', { 'for': ['clojure', 'clojurescript'] }
