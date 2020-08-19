@@ -2,4 +2,3 @@ rupa/z
 mafredri/zsh-async
 sindresorhus/pure
 zsh-users/zsh-syntax-highlighting
-lukechilds/zsh-nvm
