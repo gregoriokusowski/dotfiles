@@ -15,6 +15,8 @@ source ~/.zsh/aliases.zsh
 x() { ruby -ne "puts \$_$1" }
 xs() { ruby -ane "puts \$F$1" }
 
+weather() { curl "v2.wttr.in/${1:-Berlin}" }
+
 # Git proper auto-complete
 # https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 # Dropping the warning message manually since the zsh autocomplete doesn't consider aliases defined via git
@@ -22,7 +24,7 @@ xs() { ruby -ane "puts \$F$1" }
 source ~/.zsh/git-completion.bash
 
 
-export TERM=xterm-256color
+export TERM=screen-256color
 export EDITOR="nvim"
 export OPENER=$EDITOR
 export HIGHLIGHT_STYLE=base16/classic-light
