@@ -9,7 +9,10 @@ nnoremap <Leader>pf :NERDTreeFind<CR>
 " Search
 nnoremap <C-p> :Files<Cr>
 nnoremap <C-c> :Commands<Cr>
-nnoremap <Leader>b :Buffers<Cr>
+" bb because b hangs because of other buffer mappings and C-b may conflict when using nested tmuxes
+nnoremap <Leader>bb :Buffers<Cr>
+nnoremap <C-j> :bprevious<Cr>
+nnoremap <C-k> :bnext<Cr>
 
 " golang
 au FileType go nmap <leader>r <Plug>(go-rename)
