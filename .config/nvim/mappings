@@ -9,10 +9,6 @@ nnoremap <Leader>pf :NERDTreeFind<CR>
 " Search
 nnoremap <C-p> :Files<Cr>
 nnoremap <C-c> :Commands<Cr>
-" bb because b hangs because of other buffer mappings and C-b may conflict when using nested tmuxes
-nnoremap <Leader>bb :Buffers<Cr>
-nnoremap <C-j> :bprevious<Cr>
-nnoremap <C-k> :bnext<Cr>
 
 " golang
 au FileType go nmap <leader>r <Plug>(go-rename)
@@ -20,11 +16,17 @@ au FileType go nmap <leader>r <Plug>(go-rename)
 " text utils
 " Leader+Y copies into clipboard - from https://vim.fandom.com/wiki/Mac_OS_X_clipboard_sharing
 vnoremap <silent> <Leader>y :<CR>:let @a=@" \| execute "normal! vgvy" \| let res=system("pbcopy", @") \| let @"=@a<CR>
+" sort
+vnoremap <Leader>s :'<,'>!sort<CR><CR>
 " shuffle
-vnoremap <Leader>s :'<,'>!sort -R<CR><CR>
+vnoremap <Leader>S :'<,'>!sort -R<CR><CR>
 
 " Copy from https://github.com/liuchengxu/vim-better-default/blob/master/plugin/default.vim
 " Buffers
+" bb because b hangs because of other buffer mappings and C-b may conflict when using nested tmuxes
+nnoremap <Leader>bb :Buffers<Cr>
+nnoremap <C-j> :bprevious<Cr>
+nnoremap <C-k> :bnext<Cr>
 nnoremap <Leader>bp :bprevious<CR>
 nnoremap <Leader>bn :bnext<CR>
 nnoremap <Leader>bf :bfirst<CR>
