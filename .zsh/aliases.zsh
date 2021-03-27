@@ -6,6 +6,7 @@ alias d="docker"
 alias dc="docker-compose"
 alias v="nvim"
 alias vi="nvim"
+alias ☕="caffeinate -d"
 
 # docker
 

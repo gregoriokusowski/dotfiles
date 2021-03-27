@@ -1,7 +1,13 @@
+let mapleader=" "
+
 set surround
 set hlsearch    " highlight matches
 set incsearch   " incremental searching
 set ignorecase  " searches are case insensitive...
 set smartcase   " ... unless they contain at least one capital letter
+set NERDTree
 
-source ~/.config/nvim/init.vim
+nnoremap <Leader>pt :NERDTreeToggle<CR>
+nnoremap <Leader>pf :NERDTreeFind<CR>
+nnoremap <C-j> :bprevious<Cr>
+nnoremap <C-k> :bnext<Cr>

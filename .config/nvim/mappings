@@ -10,6 +10,9 @@ nnoremap <Leader>pf :NERDTreeFind<CR>
 nnoremap <C-p> :Files<Cr>
 nnoremap <C-c> :Commands<Cr>
 
+" .
+xnoremap . :normal .<CR>
+
 " golang
 au FileType go nmap <leader>r <Plug>(go-rename)
 
