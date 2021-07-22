@@ -1,4 +1,9 @@
-source <(antibody init)
-antibody bundle < ~/.zsh/.zsh_plugins.txt
-#antibody bundle < ~/.zsh/.zsh_plugins.txt > ~/.zsh/.zsh_plugins.sh
-#source ~/.zsh/.zsh_plugins.sh
+ANTIGEN_LOG=~/.zsh/antigen.log
+source ~/.zsh/antigen.zsh
+
+antigen bundle https://github.com/rupa/z.git
+antigen bundle https://github.com/mafredri/zsh-async.git
+antigen bundle https://github.com/sindresorhus/pure.git@main
+antigen bundle https://github.com/zsh-users/zsh-syntax-highlighting.git
+
+antigen apply
