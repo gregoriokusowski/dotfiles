@@ -1,3 +1,6 @@
+source ~/.zsh/plugins.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Oneliner prompt
 prompt_newline='%666v'
 PROMPT=" $PROMPT"

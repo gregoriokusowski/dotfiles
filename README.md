@@ -10,7 +10,7 @@ git clone git@github.com:gregoriokusowski/dotfiles.git ~/.dotfiles
 
 ## Shell
 
-Given apple is not shipping with zsh by default, why not?
+Given apple is now shipping with zsh by default, why not?
 ohmyzsh was a bit slow on my old machine, so I'll be using antibody
 
 * z
@@ -19,17 +19,10 @@ ohmyzsh was a bit slow on my old machine, so I'll be using antibody
 
 ### Installation
 
-Install Antibody:
-
-```
-brew install getantibody/tap/antibody
-```
-
 Link what is needed:
 
 ```
-cd && ln -sf ~/.dotfiles/.zshrc
-cd && ln -sf ~/.dotfiles/.zsh
+echo "source ~/dotfiles/.zsh/default.zsh" >> ~/.zshrc
 ```
 
 ## Tmux

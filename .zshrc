@@ -1,7 +1,5 @@
-source ~/.zsh/plugins.zsh
 source ~/.zsh/default.zsh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(rbenv init -)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
