@@ -5,6 +5,9 @@ let g:maplocalleader = ','
 " Project tree
 nnoremap <Leader>pt :NERDTreeToggle<CR>
 nnoremap <Leader>pf :NERDTreeFind<CR>
+command! -bang -nargs=? -complete=dir ProjectFiles call fzf#vim#files(<q-args>, {'options': ['--query=rb$ ']}, <bang>0)
+nnoremap <Leader>pp :ProjectFiles<CR>
+
 
 " Search
 nnoremap <C-p> :Files<Cr>
