@@ -5,19 +5,22 @@ let g:maplocalleader = ','
 " Project tree
 nnoremap <Leader>pt :NERDTreeToggle<CR>
 nnoremap <Leader>pf :NERDTreeFind<CR>
-command! -bang -nargs=? -complete=dir ProjectFiles call fzf#vim#files(<q-args>, {'options': ['--query=rb$ ']}, <bang>0)
-nnoremap <Leader>pp :ProjectFiles<CR>
-
 
 " Search
+" ruby only
+command! -bang -nargs=? -complete=dir ProjectFiles call fzf#vim#files(<q-args>, {'options': ['--query=rb$ ']}, <bang>0)
+nnoremap <Leader>pp :ProjectFiles<CR>
+" all files
 nnoremap <C-p> :Files<Cr>
-nnoremap <C-c> :Commands<Cr>
+" normal fzf is way faster on bigger repos
+"nnoremap <C-p> <cmd>Telescope find_files<cr>
+nnoremap <C-c> <cmd>Telescope commands<cr>
 
 " .
 xnoremap . :normal .<CR>
 
-" golang
-au FileType go nmap <leader>r <Plug>(go-rename)
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+set timeoutlen=500
 
 " text utils
 " Leader+Y copies into clipboard - from https://vim.fandom.com/wiki/Mac_OS_X_clipboard_sharing
@@ -30,7 +33,9 @@ vnoremap <Leader>S :'<,'>!sort -R<CR><CR>
 " Copy from https://github.com/liuchengxu/vim-better-default/blob/master/plugin/default.vim
 " Buffers
 " bb because b hangs because of other buffer mappings and C-b may conflict when using nested tmuxes
-nnoremap <Leader>bb :Buffers<Cr>
+" nnoremap <Leader>bb :Buffers<Cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fr <cmd>Telescope registers<cr>
 nnoremap <C-j> :bprevious<Cr>
 nnoremap <C-k> :bnext<Cr>
 nnoremap <Leader>bp :bprevious<CR>
@@ -65,3 +70,89 @@ nnoremap <Leader>w- <C-W>s
 nnoremap <Leader>wv <C-W>v
 nnoremap <Leader>w\| <C-W>v
 nnoremap <Leader>w2 <C-W>v
+
+" treesitter stuff
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+  },
+
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "<M-L>",
+      node_incremental = "<M-L>",
+      scope_incremental = "<M-K>",
+      node_decremental = "<M-H>",
+    },
+  },
+
+  indent = {
+    enable = true,
+  },
+
+  textobjects = {
+    select = {
+      enable = true,
+      lookahead = true,
+      keymaps = {
+        ["af"] = "@function.outer",
+        ["if"] = "@function.inner",
+        ["am"] = "@function.outer",
+        ["im"] = "@function.inner",
+        ["ac"] = "@class.outer",
+        ["ic"] = "@class.inner",
+      },
+    },
+    swap = {
+      enable = true,
+      swap_next = {
+        [">a"] = "@parameter.inner",
+      },
+      swap_previous = {
+        ["<a"] = "@parameter.inner",
+      },
+    },
+    move = {
+      enable = true,
+      goto_next_start = {
+        ["]m"] = "@function.outer",
+        ["]]"] = "@class.outer",
+      },
+      goto_next_end = {
+        ["]M"] = "@function.outer",
+        ["]["] = "@class.outer",
+      },
+      goto_previous_start = {
+        ["[m"] = "@function.outer",
+        ["[["] = "@class.outer",
+      },
+      goto_previous_end = {
+        ["[M"] = "@function.outer",
+        ["[]"] = "@class.outer",
+      },
+    },
+    --lsp_interop = {
+      --enable = true,
+      --peek_definition_code = {
+        --["gp"] = "@function.outer",
+      --},
+    --},
+  },
+}
+require('telescope').setup {
+  extensions = {
+    fzf = {
+      fuzzy = true,                    -- false will only do exact matching
+      override_generic_sorter = true,  -- override the generic sorter
+      override_file_sorter = true,     -- override the file sorter
+      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+                                       -- the default case_mode is "smart_case"
+    }
+  }
+}
+-- To get fzf loaded and working with telescope, you need to call
+-- load_extension, somewhere after setup function:
+require('telescope').load_extension('fzf')
+EOF
