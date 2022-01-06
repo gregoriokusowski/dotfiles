@@ -19,5 +19,5 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 ln -sf ~/dotfiles/.config/nvim ~/.config/nvim
 nvim --headless +PackerInstall +qa
 
-echo "gitconfig" # this cuts out the user info
-tail ~/dotfiles/.gitconfig --lines=+4 >> ~/.gitconfig
+# echo "gitconfig" # this cuts out the user info
+# tail ~/dotfiles/.gitconfig --lines=+4 >> ~/.gitconfig
