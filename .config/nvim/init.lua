@@ -15,11 +15,9 @@ require('packer').startup(function()
   use 'editorconfig/editorconfig-vim'
   use 'ntpeters/vim-better-whitespace'
 
-  use 'nvim-treesitter/nvim-treesitter'
   use 'nvim-treesitter/nvim-treesitter-textobjects'
+  use 'nvim-treesitter/nvim-treesitter'
   use 'neovim/nvim-lspconfig'
-  use { 'shougo/deoplete.nvim', run = function() vim.fn['remote#host#UpdateRemotePlugins']() end }
-  use 'shougo/deoplete-lsp'
 
   use { 'junegunn/fzf', run = function() vim.fn['fzf#install']() end }
   use 'junegunn/fzf.vim'
@@ -115,7 +113,6 @@ require('telescope').setup {
 -- To get fzf loaded and working with telescope, you need to call
 -- load_extension, somewhere after setup function:
 require('telescope').load_extension('fzf')
-
 
 --function Sorbet()
   require'lspconfig'.sorbet.setup{}
@@ -241,8 +238,9 @@ vimp.nnoremap('<C-c>', '<cmd>Telescope commands<cr>')
 -- " .
 vim.cmd('xnoremap . :normal .<CR>')
 --
-vimp.nnoremap('<silent>', '<leader> :WhichKey "<Space>"<CR>')
+--vimp.nnoremap('<silent>', '<leader> :WhichKey "<Space>"<CR>')
 vim.cmd('set timeoutlen=500')
+vim.cmd([[set completeopt=menu,menuone,noselect]])
 --
 -- " text utils
 -- " Leader+Y copies into clipboard - from https://vim.fandom.com/wiki/Mac_OS_X_clipboard_sharing
