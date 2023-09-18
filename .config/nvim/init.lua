@@ -17,7 +17,6 @@ require('packer').startup(function()
 
   use 'nvim-treesitter/nvim-treesitter-textobjects'
   use 'nvim-treesitter/nvim-treesitter'
-  use 'neovim/nvim-lspconfig'
 
   use { 'junegunn/fzf', run = function() vim.fn['fzf#install']() end }
   use 'junegunn/fzf.vim'
@@ -114,11 +113,8 @@ require('telescope').setup {
 -- load_extension, somewhere after setup function:
 require('telescope').load_extension('fzf')
 
---function Sorbet()
-  require'lspconfig'.sorbet.setup{}
---end
 --vim.api.nvim_command("command! Sorbet call Sorbet()")
-local nvim_lsp = require('lspconfig')
+-- local nvim_lsp = require('lspconfig')
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -155,7 +151,7 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'sorbet' }
+local servers = {} -- { 'sorbet' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
