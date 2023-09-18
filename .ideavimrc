@@ -5,9 +5,28 @@ set hlsearch    " highlight matches
 set incsearch   " incremental searching
 set ignorecase  " searches are case insensitive...
 set smartcase   " ... unless they contain at least one capital letter
-set NERDTree
+set autoread    " reloads a file when it is changed
+set ideajoin    " should be a pumped J
+set easymotion
 
+set multiple-cursors
+map <C-N>  <A-N>
+map <C-P>  <A-P>
+map <C-X>  <A-X>
+map g<C-N> g<A-N>
+
+set NERDTree
 nnoremap <Leader>pt :NERDTreeToggle<CR>
 nnoremap <Leader>pf :NERDTreeFind<CR>
+
 nnoremap <C-j> :bprevious<Cr>
 nnoremap <C-k> :bnext<Cr>
+nnoremap <A-j> :action ShrinkSelection<CR>
+nnoremap <A-k> :action ExtendSelection<CR>
+nnoremap [m :action MethodUp<cr>
+nnoremap ]m :action MethodDown<cr>
+nnoremap [e :action NextHighlightedError<cr>
+nnoremap ]e :action PreviousHighlightedError<cr>
+nnoremap <c-o> :action Back<cr>
+nnoremap <c-i> :action Forward<cr>
+nnoremap <Leader>e :action ShowErrorDescription<cr>
